@@ -1,0 +1,27 @@
+/** @format */
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-right: solid 2px lightgray;
+	padding: 10px 0 10px 0;
+	height: 40px;
+	width: 100%;
+}
+
+.container_avatar {
+	display: flex;
+	flex-grow: 1;
+	padding-left: 10px;
+}
+
+.avatar {
+	cursor: pointer;
+}
+
+.container_options {
+	display: flex;
+	font-size: 20px;
+	cursor: pointer;
+}
