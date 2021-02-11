@@ -1,0 +1,44 @@
+/** @format */
+
+.chatPerson_container {
+	display: flex;
+	flex-direction: row;
+	width: 98%;
+	height: 60px;
+	background-color: #ffffff;
+	align-items: center;
+	border-bottom: 1px solid lightgray;
+	padding-left: 12px;
+    margin-top: 3px;
+}
+
+.person_avatar {
+	display: flex;   
+	margin-top: -8px;
+	margin-right: 12px;
+}
+
+.chatPerson_summary_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* border: 1px solid red; */
+	margin-top: -13px;
+	width: 70%;
+}
+
+.chatPerson_name {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.chatPerson_message{
+    font-size: 14px;
+    color:rgb(102, 102, 102)
+}
+
+.message_time{
+    margin-top:-25px;
+    font-size: 11px;
+
+}

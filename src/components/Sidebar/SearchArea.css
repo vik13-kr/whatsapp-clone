@@ -4,13 +4,14 @@
     background-color: #F0F0F0; 
     height:39px;
     padding:10px;
+    border-bottom: 1px solid lightgray;
 }
 
 .search_container{
     display: flex;
     align-items: center;
     width:100%;
-    background-color: #F6F6F6; 
+    background-color: #ffffff; 
     border-radius: 20px;
     height:35px;
 }
@@ -22,7 +23,7 @@
 
 .search_container > input{
     border:none;
-    background-color: #F6F6F6; 
+    background-color: #ffffff; 
     width:100%;
     outline-width: 0;
 }

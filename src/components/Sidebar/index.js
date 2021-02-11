@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import ChatRooms from "./ChatRooms";
 import SearchArea from "./SearchArea";
 import "./sidebar.css";
 import TopSection from "./TopSection";
@@ -14,6 +15,9 @@ function index() {
 			<div>
 				{" "}
 				<SearchArea />
+			</div>
+			<div>
+				<ChatRooms />
 			</div>
 		</div>
 	);

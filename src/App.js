@@ -1,8 +1,8 @@
 /** @format */
 
 import "./App.css";
-import Sidebar from './components/Sidebar'
-import ChatArea from './components/ChatArea'
+import Sidebar from "./components/Sidebar";
+import ChatArea from "./components/ChatArea";
 
 function App() {
 	return (
@@ -12,7 +12,7 @@ function App() {
 				{/* Sidebar */}
 				<Sidebar />
 				{/* ChatArea */}
-        <ChatArea />
+				<ChatArea />
 			</div>
 		</div>
 	);

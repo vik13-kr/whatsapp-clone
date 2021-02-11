@@ -17,7 +17,7 @@ function TopSection() {
 			</div>
 			<div className="container_options">
 				<IconButton  >
-					<DonutLargeIcon className />
+					<DonutLargeIcon />
 				</IconButton>
                 <IconButton>
 					<ChatIcon />
