@@ -1,4 +1,6 @@
 .chatarea{
     display:flex;
     flex:0.7;
+    flex-direction: column;
+    padding:1px
 }

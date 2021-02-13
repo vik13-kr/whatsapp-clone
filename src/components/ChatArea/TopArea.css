@@ -1,0 +1,35 @@
+/** @format */
+
+.toparea_container {
+	display: flex;
+	flex-direction: row;
+	height: 60px;
+	/* border: 2px red solid; */
+	width: 100%;
+}
+
+.user_info {
+	display: flex;
+	flex-direction: column;
+}
+
+.user_avatar {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	flex-grow: 1;
+}
+
+.user_name {
+	display: flex;
+	margin-left: 10px;
+
+	font-size: large;
+	font-weight: 500;
+}
+
+.user_status {
+	margin-top: 12px;
+	margin-left: -50px;
+	font-size: x-small;
+}
