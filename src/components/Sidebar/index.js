@@ -1,12 +1,27 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import ChatRooms from "./ChatRooms";
 import SearchArea from "./SearchArea";
 import "./sidebar.css";
 import TopSection from "./TopSection";
+import db from '../../firebase'
 
-function index() {
+function Index() {
+	const [chatName, setChatName] = useState("");
+
+
+	const handleNewChat = () => {
+		 const roomName = prompt("Enter a Chat Name")
+
+		 if(roomName){
+			 db.collection('rooms').add({
+				 name:roomName,
+			 })
+		 }
+	};
+
+	console.log(chatName)
 	return (
 		<div className="sidebar">
 			<div>
@@ -16,6 +31,9 @@ function index() {
 				{" "}
 				<SearchArea />
 			</div>
+			<div className="sidebar_addChat" onClick={handleNewChat}>
+				Add New Chat
+			</div>
 			<div>
 				<ChatRooms />
 			</div>
@@ -23,4 +41,4 @@ function index() {
 	);
 }
 
-export default index;
+export default Index;

@@ -5,19 +5,16 @@
 	flex-direction: column;
 	background-color: #ffffff;
 	width: 100%;
-    min-height: 565px;
-	max-height: 565px;
+	min-height: 517px;
+	max-height: 517px;
 	overflow-y: auto;
-    overflow-x: hidden;
-    border-right: 1px solid lightgray;
+	overflow-x: hidden;
+	border-right: 1px solid lightgray;
 }
 ::-webkit-scrollbar {
-    width: 5px;
-    
-  }
+	width: 5px;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: lightgray; 
-  }
-
- 
+::-webkit-scrollbar-thumb {
+	background: lightgray;
+}

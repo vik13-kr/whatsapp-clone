@@ -1,6 +1,20 @@
-.sidebar{
-    display:flex;
-    flex:0.3;
-    flex-direction: column;  
-      
+/** @format */
+
+.sidebar {
+	display: flex;
+	flex: 0.3;
+	flex-direction: column;
+}
+
+.sidebar_addChat {
+	display: flex;
+	cursor: pointer;
+    background-color: #fff;
+	justify-content: center;
+	font-size: larger;
+	align-items: center;
+	padding: 10px 0 10px 0;
+    border-bottom: 1px solid lightgray;
+	width: 100%;
+    font-weight: 600;
 }
