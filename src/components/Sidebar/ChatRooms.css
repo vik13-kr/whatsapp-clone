@@ -2,14 +2,17 @@
 
 .chatRooms_container {
 	display: flex;
+	flex-grow: 1;
 	flex-direction: column;
 	background-color: #ffffff;
 	width: 100%;
-	min-height: 517px;
-	max-height: 517px;
+	height:100%;
+	/* min-height: 517px;
+	max-height: 517px; */
 	overflow-y: auto;
 	overflow-x: hidden;
 	border-right: 1px solid lightgray;
+	height:inherit
 }
 ::-webkit-scrollbar {
 	width: 5px;

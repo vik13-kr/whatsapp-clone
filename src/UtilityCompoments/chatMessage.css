@@ -38,7 +38,8 @@
     align-items: center;
 }
 
-.received{
+.sent{
+    margin-bottom: 20px;
     background-color: #dcf8c6;
     margin-left: auto;
 }

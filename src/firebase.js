@@ -1,9 +1,9 @@
 /** @format */
 
 // import firebase from 'firebase';
-import firebase from '@firebase/app';
-import '@firebase/firestore';
-import '@firebase/auth'
+import firebase from "@firebase/app";
+import "@firebase/firestore";
+import "@firebase/auth";
 const firebaseConfig = {
 	apiKey: "AIzaSyBYOhjv684frWppxKlc8QVDQHAd19OY74s",
 	authDomain: "vik-whatsapp-clone.firebaseapp.com",
@@ -20,5 +20,5 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 
-export {auth, provider};
+export { auth, provider };
 export default db;

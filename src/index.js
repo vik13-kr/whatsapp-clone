@@ -6,13 +6,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import reducer, { initalState } from "./reducer";
+import { StateProvider } from "./StateProvider";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Router>
-			{" "}
-			<App />
-		</Router>
+		<StateProvider reducer={reducer} initialState={initalState}>
+			<Router>
+				{" "}
+				<App />
+			</Router>
+		</StateProvider>
 	</React.StrictMode>,
 	document.getElementById("root"),
 );

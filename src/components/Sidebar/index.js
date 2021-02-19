@@ -5,23 +5,22 @@ import ChatRooms from "./ChatRooms";
 import SearchArea from "./SearchArea";
 import "./sidebar.css";
 import TopSection from "./TopSection";
-import db from '../../firebase'
+import db from "../../firebase";
 
 function Index() {
 	const [chatName, setChatName] = useState("");
 
-
 	const handleNewChat = () => {
-		 const roomName = prompt("Enter a Chat Name")
+		const roomName = prompt("Enter a Chat Name");
 
-		 if(roomName){
-			 db.collection('rooms').add({
-				 name:roomName,
-			 })
-		 }
+		if (roomName) {
+			db.collection("rooms").add({
+				name: roomName,
+			});
+		}
 	};
 
-	console.log(chatName)
+	console.log(chatName);
 	return (
 		<div className="sidebar">
 			<div>

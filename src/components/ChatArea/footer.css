@@ -33,3 +33,7 @@
 	padding: 10px;
 	border: none;
 }
+
+.footer_message_input > button {
+	display: none;
+}

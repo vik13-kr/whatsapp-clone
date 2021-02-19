@@ -4,25 +4,27 @@ import React from "react";
 import "./TopSection.css";
 import { Avatar, IconButton } from "@material-ui/core";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
-import ChatIcon from '@material-ui/icons/Chat';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import ChatIcon from "@material-ui/icons/Chat";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import { useStateValue } from "../../StateProvider";
 
 function TopSection() {
-	const url =
-		"https://c.ndtvimg.com/2021-01/cpcvt2q8_pm-modi-vaccine-drive-speech-650_625x300_16_January_21.jpg";
+	const [{ user }, dispatch] = useStateValue();
+	console.log(user)
+	console.log(user?.displayName)
 	return (
 		<div className="container">
 			<div className="container_avatar">
-				<Avatar alt="Remy Sharp" src={url} className='avatar' />
+				<Avatar src={user?.photoURL} className="avatar" />
 			</div>
 			<div className="container_options">
-				<IconButton  >
+				<IconButton>
 					<DonutLargeIcon />
 				</IconButton>
-                <IconButton>
+				<IconButton>
 					<ChatIcon />
 				</IconButton>
-                <IconButton>
+				<IconButton>
 					<MoreVertIcon />
 				</IconButton>
 			</div>

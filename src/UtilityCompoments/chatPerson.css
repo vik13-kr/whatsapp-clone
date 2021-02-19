@@ -12,6 +12,11 @@
     margin-top: 3px;
 }
 
+a{
+	text-decoration: none  !important;
+	color: black
+}
+
 .person_avatar {
 	display: flex;   
 	margin-top: -8px;

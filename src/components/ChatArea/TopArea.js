@@ -30,7 +30,7 @@ function TopArea() {
 				<p className="user_name">{roomName}</p>
 				<p className="user_status">
 					<br />
-					Last seen at ...
+					{/* add last seen */}
 				</p>
 			</div>
 			<div className="toparea_options">
