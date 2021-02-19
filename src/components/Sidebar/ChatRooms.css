@@ -12,7 +12,7 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	border-right: 1px solid lightgray;
-	height:inherit
+	
 }
 ::-webkit-scrollbar {
 	width: 5px;
