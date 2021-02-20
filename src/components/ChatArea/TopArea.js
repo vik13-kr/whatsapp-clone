@@ -21,11 +21,11 @@ function TopArea() {
 				.onSnapshot((snapshot) => setRoomData(snapshot.data().name));
 		}
 	}, [roomName, roomId]);
-	console.log(roomName);
+	// console.log(roomName);
 	return (
 		<div className="toparea_container">
 			<div className="user_avatar">
-				<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+				<Avatar alt={roomName} src="/static/images/avatar/1.jpg" />
 
 				<p className="user_name">{roomName}</p>
 				<p className="user_status">

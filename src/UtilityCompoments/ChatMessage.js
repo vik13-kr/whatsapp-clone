@@ -4,7 +4,7 @@ import React from "react";
 import "./chatMessage.css";
 
 function ChatMessage({receptionStatus, message, timestamp, name }) {
-	console.log(receptionStatus)
+	// console.log(receptionStatus)
 	return (
 		<div className={`chatmessage_container  ${receptionStatus === 'sent' ? 'sent' : ''}`}>
 			<div className="message_user_name">{name}</div>

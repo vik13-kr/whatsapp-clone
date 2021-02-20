@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { createRef, useRef, useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../firebase";
@@ -11,8 +11,9 @@ import "./chatscreen.css";
 function ChatScreen() {
 	const { roomId } = useParams();
 	const [messages, setMessages] = useState([]);
-	const [{user}, dispatch] = useStateValue()
-	console.log(messages);
+	const [{ user }, dispatch] = useStateValue();
+	const ref = useRef(null);
+
 	useEffect(() => {
 		if (roomId) {
 			db.collection("rooms")
@@ -24,18 +25,34 @@ function ChatScreen() {
 				);
 		}
 	}, [roomId]);
+
+	useEffect(() => {
+		//moved directly to bottom
+		// const chatWindow = document.getElementById('chat-window');
+		// const xH = chatWindow?.scrollHeight;
+		// console.log('xh...', xH);
+		// chatWindow.scrollTo(0, xH);
+
+		// smooth moving effect
+		ref.current?.scrollIntoView({ block: "end", behavior: "smooth" });
+	}, [roomId, messages]);
+
 	return (
-		<div className="chatscreen_container">
+		<div className="chatscreen_container" id="chat-window">
 			<div>
 				{messages.map((message, index) => (
-					<ChatMessage key={index}
-						receptionStatus={message?.name === user.displayName ? 'sent' : ''}
+					<ChatMessage
+						key={index}
+						receptionStatus={message?.name === user.displayName ? "sent" : ""}
 						name={message.name}
 						message={message.message}
-						timestamp={new Date(message.timestamp?.toDate()).toLocaleTimeString()}
+						timestamp={new Date(
+							message.timestamp?.toDate(),
+						).toLocaleTimeString()}
 					/>
 				))}
 			</div>
+			<div ref={ref} />
 		</div>
 	);
 }

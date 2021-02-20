@@ -8,8 +8,8 @@ import AttachFileIcon from "@material-ui/icons/AttachFile";
 import MicIcon from "@material-ui/icons/Mic";
 import { useParams } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
-import firebase from 'firebase';
-import db from '../../firebase';
+import firebase from "firebase";
+import db from "../../firebase";
 
 function Footer() {
 	const [input, setInput] = useState("");
@@ -17,14 +17,17 @@ function Footer() {
 	const [{ user }, dispatch] = useStateValue();
 	const sendMessage = (e) => {
 		e.preventDefault();
-        db.collection('rooms').doc(roomId).collection('messages').add({
-            message:input,
-            name: user.displayName,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        })
+		if (input) {
+			db.collection("rooms").doc(roomId).collection("messages").add({
+				message: input,
+				name: user.displayName,
+				timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+			});
+		}
+
 		setInput("");
 	};
-	console.log(input);
+	// console.log(input);
 	return (
 		<div className="footer_container">
 			<div className="footer_options">
